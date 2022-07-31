@@ -1,0 +1,94 @@
+/* CSS file containing EVERY style choice for each item */
+
+/* starting at the nav bar */
+body {
+  margin: 0;
+  margin-top: 0px;
+}
+
+.navbar {
+  color: white;
+  background-color: rgb(63, 55, 55);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  max-height: 80px;
+  position: fixed;
+}
+.navbarLogo {
+  font-size: 1.7em;
+  padding-left: 10px;
+  width: 17%;
+  z-index: 1;
+}
+.navbarItems {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  min-height: 138px;
+}
+.navbarItemContainer {
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  transition: all 0s;
+}
+.navbarItemContainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.08, 1.13);
+}
+.navbarItemContainer a:hover {
+  background-color: rgb(77, 70, 70);
+  color: rgb(113, 241, 235);
+  font-size: 18px;
+}
+.navbarButton {
+  position: fixed;
+  top: 0px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+  right: 0px;
+  cursor: pointer;
+  height: 116px;
+}
+.navbarButtonItem {
+  transition: all 0.3s linear;
+  font-size: 3.5em;
+}
+.navbarButtonItem:hover {
+  transform: rotate(45deg);
+}
+.showMenu {
+  position: fixed;
+  top: 100px !important;
+}
+
+@media only screen and (max-width: 517px) {
+  .navbarItems {
+    flex-direction: column;
+    position: fixed;
+    top: -1000px;
+    background-color: rgb(63, 55, 55);
+    transition: 0.3s;
+    z-index: 0;
+  }
+  .navbarButton {
+    display: flex;
+  }
+}
