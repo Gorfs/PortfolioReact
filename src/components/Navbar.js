@@ -19,7 +19,7 @@ const Navbar = ({ items }) => {
         ))}
       </div>
       <div className="navbarButton " onClick={showMenu}>
-        <span class="material-symbols-outlined navbarButtonItem">apps</span>
+        <span className="material-symbols-outlined navbarButtonItem">apps</span>
       </div>
     </nav>
   )

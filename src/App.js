@@ -1,8 +1,10 @@
 import { parallax, ParallaxLayer } from "@react-spring/parallax"
-import Typed from "typed.js"
+
 import "./index.css"
 
 import Navbar from "./components/Navbar"
+import TypedPhrase from "./components/Typed"
+import Intro from "./components/Intro"
 
 function App() {
   const navbaritems = [
@@ -26,7 +28,10 @@ function App() {
   return (
     <div className="App">
       <Navbar items={navbaritems} />
-      Portfolio website
+      <br />
+      <div className="mainContent">
+        <Intro />
+      </div>
     </div>
   )
 }
