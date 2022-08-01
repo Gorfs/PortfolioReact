@@ -8,13 +8,20 @@ const TypedPhrase = () => {
 
   useEffect(() => {
     const typed = new Typed(ref.current, {
-      strings: ["Handy", "Mandy", "Candy", "More Strings"], // Strings to display
+      strings: [
+        "Archie Beales",
+        "british 🇬🇧",
+        "dedicated",
+        "curious",
+        "open-minded",
+        "a student",
+      ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       loop: true,
-      startDelay: 10,
-      typeSpeed: 100,
-      backSpeed: 100,
+      typeSpeed: 80,
+      backSpeed: 80,
       backDelay: 100,
+      smartBackspace: true,
     })
 
     // Destropying
@@ -25,7 +32,7 @@ const TypedPhrase = () => {
 
   return (
     <div>
-      <p className="typedPhraseElement" ref={ref}></p>
+      I am <p className="typedPhraseElement" ref={ref}></p>
     </div>
   )
 }

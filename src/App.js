@@ -1,10 +1,10 @@
-import { parallax, ParallaxLayer } from "@react-spring/parallax"
+import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 
 import "./index.css"
 
 import Navbar from "./components/Navbar"
-import TypedPhrase from "./components/Typed"
 import Intro from "./components/Intro"
+import AboutMe from "./components/AboutMe"
 
 function App() {
   const navbaritems = [
@@ -29,8 +29,27 @@ function App() {
     <div className="App">
       <Navbar items={navbaritems} />
       <br />
+
       <div className="mainContent">
-        <Intro />
+        <Parallax className="parallax" pages={2}>
+          <ParallaxLayer
+            speed={-0.35}
+            style={{
+              backgroundColor: "#121316",
+            }}
+            factor={2}
+          >
+            <Intro />
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={1}
+            style={{
+              backgroundColor: "#121316",
+            }}
+          >
+            <AboutMe />
+          </ParallaxLayer>
+        </Parallax>
       </div>
     </div>
   )
