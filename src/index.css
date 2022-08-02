@@ -6,6 +6,9 @@
 body {
   margin: 0;
   margin-top: 0px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 html {
   overflow-x: initial;
@@ -112,7 +115,7 @@ html {
 }
 .introSection {
   overflow: hidden;
-  height: 90vh;
+  min-height: 100vh;
   display: flex;
   color: white;
   justify-content: flex-end;
@@ -126,11 +129,12 @@ html {
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  top: 34vh;
+  top: 26vh;
   left: 3vw;
   padding: 0em;
   font-size: 2vw;
   font-weight: 500;
+  z-index: 2;
 }
 .typedPhraseElement {
   display: inline;
@@ -139,10 +143,52 @@ html {
 }
 
 .spline {
-  min-height: 100%;
-  min-width: 90vw;
+  position: absolute;
+  margin: 0;
+  top: 0vh;
+  right: 0;
 }
-
+.splineContainer {
+  position: relative;
+  max-height: 100vw;
+  min-width: 100vw;
+}
+/* doesn't matter if the backupImg styles are applied here or after the media query, just cleaner this way */
+.backupImg {
+  display: none;
+  position: absolute;
+  max-width: 180vw;
+  margin-top: 20vh;
+  top: 0;
+  right: -60vw;
+}
+@media only screen and (max-width: 973px) {
+  .splineContainer {
+    max-height: 60vw;
+    min-width: 100vw;
+  }
+  .typedPhraseContainer {
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 872px) {
+  .splineContainer {
+    display: none;
+  }
+  .backupImg {
+    display: block;
+  }
+  .typedPhraseContainer {
+    font-size: 5vw;
+    top: 10vh;
+  }
+}
+@media only screen and (max-width: 517px) {
+  .introSection {
+    min-height: none;
+    max-height: 50px;
+  }
+}
 .custom-shape-divider-top-1659392391 {
   position: absolute;
   top: 0;
@@ -164,7 +210,14 @@ html {
 }
 /* END OF THE INTRO SECTION */
 .aboutMe {
-  border: 2px solid blue;
   min-height: 100vh;
-  background-color: azure;
+  background-color: beige;
+}
+.aboutMeMainContent {
+  padding-top: 10vh;
+  color: #25272b;
+}
+.aboutMeMainTitle {
+  text-align: center;
+  font-size: 3vw;
 }

@@ -1,3 +1,5 @@
+import { Parallax, ParallaxLayer } from "@react-spring/parallax"
+
 const AboutMe = () => {
   return (
     <div className="aboutMe">
@@ -24,7 +26,14 @@ const AboutMe = () => {
           ></path>
         </svg>
       </div>
-      about me
+      <div className="aboutMeMainContent">
+        <h2 className="aboutMeMainTitle">About Me!</h2>
+      </div>
+      <div>
+        <div>first two boxes</div>
+        <div>second two boxes</div>
+        <div> main content section</div>
+      </div>
     </div>
   )
 }

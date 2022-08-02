@@ -29,15 +29,13 @@ function App() {
     <div className="App">
       <Navbar items={navbaritems} />
       <br />
-
       <div className="mainContent">
         <Parallax className="parallax" pages={2}>
           <ParallaxLayer
-            speed={-0.35}
+            speed={-0.75}
             style={{
               backgroundColor: "#121316",
             }}
-            factor={2}
           >
             <Intro />
           </ParallaxLayer>

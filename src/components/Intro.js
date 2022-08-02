@@ -1,17 +1,26 @@
 import TypedPhrase from "./Typed"
 import SplineRender from "./SplineRender"
+import image from "../images/3d.png"
 
 const Intro = () => {
   return (
     <div className="introSection">
       <div className="typedPhraseContainer">
-        Hey there!
+        <i>Hey there!</i>
+        <br />
         <TypedPhrase />
-        <p>And welcome to my portfolio!</p>
+        <i>And welcome to my portfolio!</i>
       </div>
 
-      <div className="spline">
+      <div className="splineContainer">
         <SplineRender />
+      </div>
+      <div>
+        <img
+          className="backupImg"
+          src={image}
+          alt="3drender of terminal with key information"
+        />
       </div>
     </div>
   )
